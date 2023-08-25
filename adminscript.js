@@ -36,6 +36,7 @@ function getParts(name) {
           if (req.status == 200) { // 通信の成功時
             fn.value = name;
             t.value = req.responseText; 
+            r.innerHTML = "";
           } else {
             r.innerHTML = "通信エラー";
           }
