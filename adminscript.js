@@ -58,6 +58,7 @@ function getPartsList(){
         if (req.readyState == 4) { // 通信の完了時
           if (req.status == 200) { // 通信の成功時
             pl.innerHTML = req.responseText; 
+            r.innerHTML = "";
           } else {
             r.innerHTML = "通信エラー";
           }
