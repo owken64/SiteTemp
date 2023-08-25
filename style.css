@@ -1,0 +1,16 @@
+body {
+    background-color: #ffeeee;
+}
+
+.sidebar {
+    float: left;
+    width: 30%;
+    height: 100vh;
+}
+
+.container {
+    float: right;
+    width: 70%;
+    min-height: 100vh;
+}
+
