@@ -91,8 +91,7 @@ function postCustomCss(){
   req.open('POST', 'updateCustomCss.php', true);
   req.setRequestHeader('content-type',
     'application/x-www-form-urlencoded;charset=UTF-8');
-  req.send('filename=' + encodeURIComponent(fn.value)
-   + '&' + 'src=' + encodeURIComponent(t.value));
+  req.send('src=' + encodeURIComponent(t.value));
 }
 
 function postCustomJs(){
@@ -116,8 +115,7 @@ function postCustomJs(){
   req.open('POST', 'updateCustomJs.php', true);
   req.setRequestHeader('content-type',
     'application/x-www-form-urlencoded;charset=UTF-8');
-  req.send('filename=' + encodeURIComponent(fn.value)
-   + '&' + 'src=' + encodeURIComponent(t.value));
+  req.send('src=' + encodeURIComponent(t.value));
 }
 
 function getCustomCss(){
