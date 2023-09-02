@@ -142,7 +142,7 @@ function getCustomCss(){
     req.send(null);   
 }
 
-function getCustomCss(){
+function getCustomJs(){
   var req = new XMLHttpRequest();
 
   let t = document.getElementById("custom-js-src");
