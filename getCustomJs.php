@@ -1,5 +1,5 @@
 <?php
-    $ary = file("custom.css");
+    $ary = file("custom.js");
     foreach( $ary as $i) {
         echo $i;
     }
