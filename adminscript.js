@@ -138,8 +138,8 @@ function getCustomCss(){
           r.innerHTML = "通信中...";
       }
     }
-  req.open('GET', 'custom.css', true);
-  req.send(null);   
+    req.open('GET', 'getCustomCss.php', true);
+    req.send(null);   
 }
 
 function getCustomCss(){
@@ -160,6 +160,6 @@ function getCustomCss(){
           r.innerHTML = "通信中...";
       }
     }
-  req.open('GET', 'custom.js', true);
+    req.open('GET', 'getCustomJs.php', true);
   req.send(null);   
 }
