@@ -1,11 +1,50 @@
 <html lang="ja">
     <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="adminstyle.css">
         <script type="text/javascript" src="adminscript.js"></script>
     </head>
     <body>
-        <input id="filename">
-        <textarea id="text"></textarea>
-        <button onclick="postPage()">保存</button>
+        <h1>管理者ページ</h1>
+        <div>パーツ一覧</div>
+        <div id="parts-list"></div>
+        <div>
+            パーツ名: <input id="filename">.html.part
+        </div>
+        <div>
+            <p>
+                HTMLは、html, head, bodyタグは必要ありません。<br>
+                bodyタグの中身を書いてください。
+            </p>
+            <p>
+                他のパーツにリンクするときは、onclick属性に<br>
+                changeContainer(パーツ名)を指定してください。
+            </p>
+            HTML:
+           <div>
+              <textarea id="text"></textarea>
+           </div>
+        </div>
+        <div>
+          <button onclick="postPage()">Webパーツを保存</button>
+        </div>
+        <div>
+            カスタムCSS
+        </div>
+        <div>
+            <textarea id="custom-css-src"></textarea>
+        </div>
+        <div onclick="postCustomCss()">カスタムCSSを保存</div>
+
+        <div>
+            カスタムJS
+        </div>
+        <div>
+            <textarea id="custom-css-js"></textarea>
+        </div>
+        <div onclick="postCustomJs()">カスタムJSを保存</div>
+
         <div id="result"></div>
     </body>
+    <script> getPartsList(); getCustomCss(); getCustomJs();</script>
 </html>
