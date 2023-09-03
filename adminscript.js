@@ -1,3 +1,29 @@
+function login(){
+  var req = new XMLHttpRequest();
+
+  let c = document.getElementById("container");
+  let p = document.getElementById("password");
+  req.onreadystatechange = function() {
+
+      if (req.readyState == 4) { // 通信の完了時
+        if (req.status == 200) { // 通信の成功時
+          c.innerHTML = req.responseText;
+          getPartsList(); getCustomCss(); getCustomJs();
+        } else {
+          c.innerHTML = req.responseText;
+        }
+      }else{
+        c.innerHTML = "Connecting...";
+      }
+    }
+  
+  req.open('POST', 'login.php', true);
+  req.setRequestHeader('content-type',
+    'application/x-www-form-urlencoded;charset=UTF-8');
+  req.send('password=' + encodeURIComponent(p.value));
+
+}
+
 function postPage() {
   var req = new XMLHttpRequest();
 
